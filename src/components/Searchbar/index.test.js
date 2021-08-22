@@ -3,6 +3,8 @@ import { render, cleanup } from '@testing-library/react';
 
 import renderer from 'react-test-renderer';
 
+var query = ''
+
 describe('Searchbar', () => {
 
     afterEach(cleanup)

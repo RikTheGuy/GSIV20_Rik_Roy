@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import Header from '../components/Header/index.js'
 import MovieItem from '../components/MovieItem/index.js'
 
-import { listMovies } from '../store/actions/MovieActions.js'
+import { listMovies, searchMovies } from '../store/actions/MovieActions.js'
+import { MOVIES_LIST_RESET } from '../store/constants/MovieConstants.js'
 
 import './ListScreen.scss'
 
@@ -13,6 +14,7 @@ const ListScreen = () => {
     const dispatch = useDispatch()
     const { data, loading, error } = useSelector(state => state.movieList)
 
+    const [query, setQuery] = useState('')
     const [page, setPage] = useState(1)
 
     const observer = useRef()
@@ -25,21 +27,48 @@ const ListScreen = () => {
 
         observer.current = new IntersectionObserver(entries => {
             if (entries[0].isIntersecting && page < data.pages) {
-                dispatch(listMovies(page + 1))
+                if (query.length > 0) {
+                    dispatch(searchMovies(query, page + 1))
+                } else {
+                    dispatch(listMovies(page + 1))
+                }
                 setPage(prev => prev + 1)
             }
         })
 
         if (node) observer.current.observe(node)
-    }, [loading, data.pages, page, dispatch])
+    }, [loading, data.pages, page, query, dispatch])
 
     useEffect(() => {
+        setPage(1)
+        dispatch({ type: MOVIES_LIST_RESET })
         dispatch(listMovies())
     }, [dispatch])
 
+    const performSearch = (e) => {
+        e.preventDefault()
+
+        setPage(1)
+        dispatch({ type: MOVIES_LIST_RESET })
+        if (query.length > 0) {
+            dispatch(searchMovies(query))
+        } else {
+            dispatch(listMovies())
+        }
+
+
+    }
+
+    const performCancel = () => {
+        setQuery('')
+        setPage(1)
+        dispatch({ type: MOVIES_LIST_RESET })
+        dispatch(listMovies())
+    }
+
     return (
         <>
-            <Header searchbar />
+            <Header searchbar query={query} setQuery={setQuery} onSearch={performSearch} onCancel={performCancel} />
             <div className='main-grid'>
                 {
                     data.movies.map((movie, index) => {

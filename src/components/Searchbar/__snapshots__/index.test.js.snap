@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Searchbar Snapshot Testing Renders Properly 1`] = `
-<div
+<form
   className="searchbar"
   data-testid="searchbar"
 >
@@ -12,8 +12,19 @@ exports[`Searchbar Snapshot Testing Renders Properly 1`] = `
   </span>
   <input
     id="search-input"
+    onChange={[Function]}
     placeholder="Search"
     type="text"
+    value=""
   />
-</div>
+  <div
+    className="buttons"
+  >
+    <span
+      className="material-icons icon"
+    >
+      clear
+    </span>
+  </div>
+</form>
 `;

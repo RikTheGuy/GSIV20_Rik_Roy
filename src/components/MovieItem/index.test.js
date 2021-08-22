@@ -2,8 +2,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import MovieItem from './index.js';
 import { render, cleanup } from '@testing-library/react';
 
-import renderer from 'react-test-renderer';
-
 const sample_object = {
     id: 1212,
     poster_path: 'null_image.jpg',

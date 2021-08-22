@@ -9,7 +9,7 @@ exports[`Header Snapshot Testing Test With Searchbar 1`] = `
       className="title"
       data-testid="title"
     >
-      <div
+      <form
         className="searchbar"
         data-testid="searchbar"
       >
@@ -20,10 +20,21 @@ exports[`Header Snapshot Testing Test With Searchbar 1`] = `
         </span>
         <input
           id="search-input"
+          onChange={[Function]}
           placeholder="Search"
           type="text"
+          value=""
         />
-      </div>
+        <div
+          className="buttons"
+        >
+          <span
+            className="material-icons icon"
+          >
+            clear
+          </span>
+        </div>
+      </form>
     </div>
     <a
       href="/"
@@ -48,7 +59,7 @@ exports[`Header Snapshot Testing Test With Searchbar and title 1`] = `
       className="title"
       data-testid="title"
     >
-      <div
+      <form
         className="searchbar"
         data-testid="searchbar"
       >
@@ -59,10 +70,21 @@ exports[`Header Snapshot Testing Test With Searchbar and title 1`] = `
         </span>
         <input
           id="search-input"
+          onChange={[Function]}
           placeholder="Search"
           type="text"
+          value=""
         />
-      </div>
+        <div
+          className="buttons"
+        >
+          <span
+            className="material-icons icon"
+          >
+            clear
+          </span>
+        </div>
+      </form>
     </div>
     <a
       href="/"

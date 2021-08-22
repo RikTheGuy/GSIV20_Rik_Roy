@@ -9,7 +9,7 @@ const index = ({ item }) => {
         <div className='movie-item'>
             <div className='poster'>
                 <Link to={`/${item.id}`}>
-                    <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.original_title} />
+                    <img src={item.poster_path? `https://www.themoviedb.org/t/p/w220_and_h330_face/${item.poster_path}`: '/notfound.jpg'} alt={item.original_title} />
                 </Link>
             </div>
             <div className='container'>
