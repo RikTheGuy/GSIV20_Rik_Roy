@@ -1,0 +1,35 @@
+@import "../../styles/colors.scss";
+@import "../../styles/values.scss";
+
+.header {
+  background-color: $primary;
+  color: $accent;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 0.1rem 0.3rem 0.1rem $light-gray;
+    padding: 1rem 1rem;
+
+    a {
+      color: inherit;
+    }
+
+    @media screen and (min-width: $breakpoint) {
+      padding: 1rem 3rem;
+    }
+
+    .title {
+      width: 75%;
+      @media screen and (min-width: $breakpoint) {
+        width: 400px;
+      }
+      h4 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    }
+  }
+}

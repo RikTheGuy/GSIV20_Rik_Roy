@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Searchbar Snapshot Testing Renders Properly 1`] = `
+<div
+  className="searchbar"
+  data-testid="searchbar"
+>
+  <span
+    className="material-icons icon"
+  >
+    search
+  </span>
+  <input
+    id="search-input"
+    placeholder="Search"
+    type="text"
+  />
+</div>
+`;

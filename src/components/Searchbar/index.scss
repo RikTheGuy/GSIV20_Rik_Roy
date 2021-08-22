@@ -1,0 +1,33 @@
+@import "../../styles/colors.scss";
+
+.searchbar {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid $disabled;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+  background-color: $disabled;
+  color: $light-gray;
+
+  input#search-input {
+    border: 1px solid transparent;
+    width: 100%;
+    font-size: 1rem;
+    background-color: $disabled;
+    color: $gray;
+
+    &::placeholder {
+      color: $light-gray;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid transparent;
+    }
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}

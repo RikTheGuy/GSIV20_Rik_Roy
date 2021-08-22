@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Snapshot Testing Test With Searchbar 1`] = `
+<header
+  className="header"
+>
+  <nav>
+    <div
+      className="title"
+      data-testid="title"
+    >
+      <div
+        className="searchbar"
+        data-testid="searchbar"
+      >
+        <span
+          className="material-icons icon"
+        >
+          search
+        </span>
+        <input
+          id="search-input"
+          placeholder="Search"
+          type="text"
+        />
+      </div>
+    </div>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <span
+        className="material-icons home-icon"
+      >
+        home
+      </span>
+    </a>
+  </nav>
+</header>
+`;
+
+exports[`Header Snapshot Testing Test With Searchbar and title 1`] = `
+<header
+  className="header"
+>
+  <nav>
+    <div
+      className="title"
+      data-testid="title"
+    >
+      <div
+        className="searchbar"
+        data-testid="searchbar"
+      >
+        <span
+          className="material-icons icon"
+        >
+          search
+        </span>
+        <input
+          id="search-input"
+          placeholder="Search"
+          type="text"
+        />
+      </div>
+    </div>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <span
+        className="material-icons home-icon"
+      >
+        home
+      </span>
+    </a>
+  </nav>
+</header>
+`;
+
+exports[`Header Snapshot Testing Test With Title 1`] = `
+<header
+  className="header"
+>
+  <nav>
+    <div
+      className="title"
+      data-testid="title"
+    >
+      <h4>
+        Sample Title
+      </h4>
+    </div>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <span
+        className="material-icons home-icon"
+      >
+        home
+      </span>
+    </a>
+  </nav>
+</header>
+`;
