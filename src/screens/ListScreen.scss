@@ -1,0 +1,30 @@
+@import "../styles/values.scss";
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 1rem;
+
+  @media screen and (min-width: $breakpoint) {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem 3rem;
+  }
+
+  //Had to add more breakpoints.
+  //It Was Looking Horrible
+
+  @media screen and (min-width: 786px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 1rem 3rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 1rem 3rem;
+  }
+}
+
+.data-container {
+  text-align: center;
+}
