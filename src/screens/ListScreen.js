@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import Header from '../components/Header/index.js'
 import Loader from '../components/Loader/index.js'
+import Message from '../components/Message/index.js'
 import MovieItem from '../components/MovieItem/index.js'
 
 import { listMovies, searchMovies } from '../store/actions/MovieActions.js'
@@ -84,7 +85,7 @@ const ListScreen = () => {
             <div className='data-container'>
                 {
                     loading ? <Loader /> :
-                        error != null && error.message
+                        error != null && <Message message={error.message} danger />
                 }
             </div>
         </>

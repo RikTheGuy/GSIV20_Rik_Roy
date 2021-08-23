@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import Header from '../components/Header/index.js'
 import Loader from '../components/Loader/index.js'
+import Message from '../components/Message/index.js'
 
 import { getMovie } from '../store/actions/MovieActions.js'
 
@@ -28,7 +29,7 @@ const DetailScreen = ({ match }) => {
         <>
             <Header title='Movie Details' />
             <div>{loading ? <Loader /> :
-                error ? 'Error: ' + error :
+                error ? <Message message={error.message} danger /> :
                     data && data.credits &&
                     <div className='movieDetail'>
                         <div className='image'>

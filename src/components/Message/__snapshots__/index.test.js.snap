@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message Snapshot Testing Danger 1`] = `
+<div
+  className="message danger"
+  data-testid="message"
+>
+  Sample Message
+</div>
+`;
+
+exports[`Message Snapshot Testing Normal 1`] = `
+<div
+  className="message false"
+  data-testid="message"
+>
+  Sample Message
+</div>
+`;

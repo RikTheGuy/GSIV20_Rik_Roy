@@ -5,7 +5,7 @@ import { render, cleanup } from '@testing-library/react';
 const sample_object = {
     id: 1212,
     poster_path: 'null_image.jpg',
-    original_title: 'Test Title',
+    title: 'Test Title',
     overview: 'Sample Description',
     vote_average: 7.5
 }
@@ -19,16 +19,15 @@ describe('Movie Item', () => {
                 <Router>
                     <MovieItem item={sample_object} />
                 </Router>)
-            expect(getByTestId('title')).toHaveTextContent(sample_object.original_title)
+            expect(getByTestId('title')).toHaveTextContent(sample_object.title)
             expect(getByTestId('rating')).toHaveTextContent(sample_object.vote_average)
             expect(getByTestId('desc')).toHaveTextContent(sample_object.overview)
         })
 
         test('Empty Rating', () => {
-            sample_object.vote_average = null
             const { getByTestId } = render(
                 <Router>
-                    <MovieItem item={sample_object} />
+                    <MovieItem item={{ ...sample_object, vote_average: null }} />
                 </Router>)
             expect(getByTestId('rating')).toHaveTextContent('0')
         })

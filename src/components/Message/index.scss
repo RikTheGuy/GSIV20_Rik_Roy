@@ -1,0 +1,17 @@
+@import "../../styles/colors.scss";
+
+.message {
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid $accent;
+  color: $accent;
+  background-color: $primary;
+  border-radius: 0.2rem;
+  text-align: center;
+  font-weight: 600;
+
+  &.danger {
+    color: $red;
+  }
+}

@@ -14,7 +14,7 @@ const index = ({ item }) => {
             </div>
             <div className='container'>
                 <h4 data-testid='title'><Link to={`/${item.id}`}><Clamp lines={1}>{item.title}</Clamp></Link></h4>
-                <h4 data-testid='rating'>{item.vote_average ? item.vote_average : 0}</h4>
+                <h4 data-testid='rating'>{item.vote_average ? item.vote_average : '0'}</h4>
             </div>
             <div data-testid='desc' className='desc'>
                 <Clamp withTooltip={false} lines={2}>
