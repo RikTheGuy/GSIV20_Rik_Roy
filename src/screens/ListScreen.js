@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import Header from '../components/Header/index.js'
+import Loader from '../components/Loader/index.js'
 import MovieItem from '../components/MovieItem/index.js'
 
 import { listMovies, searchMovies } from '../store/actions/MovieActions.js'
@@ -82,7 +83,7 @@ const ListScreen = () => {
             </div>
             <div className='data-container'>
                 {
-                    loading ? 'Loading...' :
+                    loading ? <Loader /> :
                         error != null && error.message
                 }
             </div>

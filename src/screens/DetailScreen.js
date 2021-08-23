@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import Header from '../components/Header/index.js'
+import Loader from '../components/Loader/index.js'
 
 import { getMovie } from '../store/actions/MovieActions.js'
 
@@ -26,7 +27,7 @@ const DetailScreen = ({ match }) => {
     return (
         <>
             <Header title='Movie Details' />
-            <div>{loading ? 'Loading...' :
+            <div>{loading ? <Loader /> :
                 error ? 'Error: ' + error :
                     data && data.credits &&
                     <div className='movieDetail'>

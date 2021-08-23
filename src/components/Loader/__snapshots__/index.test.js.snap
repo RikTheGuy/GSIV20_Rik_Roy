@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader Snapshot Testing 1`] = `
+<div
+  className="loader"
+  data-testid="loader"
+>
+  <div
+    className="spinner"
+    data-testid="spinner"
+  />
+  <div
+    data-testid="text"
+  >
+    Loading
+  </div>
+</div>
+`;

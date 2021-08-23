@@ -1,0 +1,39 @@
+@import "../../styles/colors.scss";
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+  .spinner {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 1px solid $accent;
+    box-shadow: 0 0 1rem $accent;
+    border-bottom: 0;
+    border-radius: 50%;
+    animation: spinner-load 0.5s linear infinite;
+  }
+
+  > div:last-child {
+    margin-top: 1rem;
+  }
+
+  @keyframes spinner-load {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
