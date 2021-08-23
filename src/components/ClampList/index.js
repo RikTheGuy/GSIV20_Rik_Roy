@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './index.scss';
 
 const ClampList = ({ list, amount }) => {
 
     const [expanded, setExpanded] = useState(false)
-    const [renderList, setRenderList] = useState(list.slice(0, amount))
+    const [renderList, setRenderList] = useState([])
+
+    useEffect(() => {
+        setRenderList(list.slice(0, amount))
+    }, [list, amount])
 
 
     const toggleExpand = () => {
