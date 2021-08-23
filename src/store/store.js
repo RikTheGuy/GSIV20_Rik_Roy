@@ -1,10 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
-import { MovieListReducer } from './reducers/MovieReducer.js'
+import { MovieListReducer, MovieDetailReducer } from './reducers/MovieReducer.js'
 
 const reducer = combineReducers({
-    movieList: MovieListReducer
+    movieList: MovieListReducer,
+    movieDetail: MovieDetailReducer
 })
 
 const store = createStore(reducer, applyMiddleware(thunk))
