@@ -1,128 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header Snapshot Testing Test With Searchbar 1`] = `
-<header
-  className="header"
->
-  <nav>
-    <div
-      className="title"
-      data-testid="title"
-    >
-      <form
-        className="searchbar"
-        data-testid="searchbar"
+Array [
+  <header
+    className="header"
+  >
+    <nav>
+      <div
+        className="title"
+        data-testid="title"
       >
-        <span
-          className="material-icons icon"
-        >
-          search
-        </span>
-        <input
-          id="search-input"
-          onChange={[Function]}
-          placeholder="Search"
-          type="text"
-          value=""
-        />
-        <div
-          className="buttons"
+        <form
+          className="searchbar"
+          data-testid="searchbar"
         >
           <span
             className="material-icons icon"
           >
-            clear
+            search
           </span>
-        </div>
-      </form>
-    </div>
-    <a
-      href="/"
-      onClick={[Function]}
-    >
-      <span
-        className="material-icons home-icon"
+          <input
+            id="search-input"
+            onChange={[Function]}
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <div
+            className="buttons"
+          >
+            <span
+              className="material-icons icon"
+            >
+              clear
+            </span>
+          </div>
+        </form>
+      </div>
+      <a
+        href="/"
+        onClick={[Function]}
       >
-        home
-      </span>
-    </a>
-  </nav>
-</header>
+        <span
+          className="material-icons home-icon"
+        >
+          home
+        </span>
+      </a>
+    </nav>
+  </header>,
+  <div
+    className="push-down"
+  />,
+]
 `;
 
 exports[`Header Snapshot Testing Test With Searchbar and title 1`] = `
-<header
-  className="header"
->
-  <nav>
-    <div
-      className="title"
-      data-testid="title"
-    >
-      <form
-        className="searchbar"
-        data-testid="searchbar"
+Array [
+  <header
+    className="header"
+  >
+    <nav>
+      <div
+        className="title"
+        data-testid="title"
       >
-        <span
-          className="material-icons icon"
-        >
-          search
-        </span>
-        <input
-          id="search-input"
-          onChange={[Function]}
-          placeholder="Search"
-          type="text"
-          value=""
-        />
-        <div
-          className="buttons"
+        <form
+          className="searchbar"
+          data-testid="searchbar"
         >
           <span
             className="material-icons icon"
           >
-            clear
+            search
           </span>
-        </div>
-      </form>
-    </div>
-    <a
-      href="/"
-      onClick={[Function]}
-    >
-      <span
-        className="material-icons home-icon"
+          <input
+            id="search-input"
+            onChange={[Function]}
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <div
+            className="buttons"
+          >
+            <span
+              className="material-icons icon"
+            >
+              clear
+            </span>
+          </div>
+        </form>
+      </div>
+      <a
+        href="/"
+        onClick={[Function]}
       >
-        home
-      </span>
-    </a>
-  </nav>
-</header>
+        <span
+          className="material-icons home-icon"
+        >
+          home
+        </span>
+      </a>
+    </nav>
+  </header>,
+  <div
+    className="push-down"
+  />,
+]
 `;
 
 exports[`Header Snapshot Testing Test With Title 1`] = `
-<header
-  className="header"
->
-  <nav>
-    <div
-      className="title"
-      data-testid="title"
-    >
-      <h4>
-        Sample Title
-      </h4>
-    </div>
-    <a
-      href="/"
-      onClick={[Function]}
-    >
-      <span
-        className="material-icons home-icon"
+Array [
+  <header
+    className="header"
+  >
+    <nav>
+      <div
+        className="title"
+        data-testid="title"
       >
-        home
-      </span>
-    </a>
-  </nav>
-</header>
+        <h4>
+          Sample Title
+        </h4>
+      </div>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <span
+          className="material-icons home-icon"
+        >
+          home
+        </span>
+      </a>
+    </nav>
+  </header>,
+  <div
+    className="push-down"
+  />,
+]
 `;

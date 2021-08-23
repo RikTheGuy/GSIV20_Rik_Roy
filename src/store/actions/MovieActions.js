@@ -70,7 +70,6 @@ export const getMovie = (id) => async (dispatch) => {
             url: `https://api.themoviedb.org/3/movie/${id}?api_key=689f2bd90d83f0bd6b6bc75e80d979df&append_to_response=credits`
         })
 
-        console.log(data)
         dispatch({
             type: MOVIES_DETAIL_SUCCESS,
             payload: data

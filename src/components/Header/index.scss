@@ -4,6 +4,10 @@
 .header {
   background-color: $primary;
   color: $accent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
   nav {
     display: flex;
@@ -32,4 +36,8 @@
       }
     }
   }
+}
+
+.push-down{
+  height: 5rem;
 }

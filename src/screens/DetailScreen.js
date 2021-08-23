@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import Header from '../components/Header/index.js'
 import Loader from '../components/Loader/index.js'
 import Message from '../components/Message/index.js'
+import ClampList from '../components/ClampList/index.js'
 
 import { getMovie } from '../store/actions/MovieActions.js'
 
@@ -48,16 +49,11 @@ const DetailScreen = ({ match }) => {
                             <div>
                                 <span>{data.release_date != null && data.release_date.slice(0, 4)}</span> |
                                 <span>{data.runtime != null && Math.trunc(data.runtime / 60)}hr {Math.trunc(data.runtime % 60)}mins</span> |
-                                <span>{
-                                    directors.map((x, i) => {
-                                        return <span>{x.name}{i === directors.length - 1 ? '' : ', '}</span>
-                                    })}</span>
+                                <ClampList list={directors} amount={2} />
                             </div>
-                            <div><strong>Cast:</strong> {data.credits.cast.map((x, i) => {
-                                return <span>
-                                    {x.name}{i === data.credits.cast.length - 1 ? '' : ', '}
-                                </span>
-                            })}</div>
+                            <div><strong>Cast: </strong>
+                                <ClampList list={data.credits.cast} amount={5} />
+                            </div>
                             {
                                 data.overview &&
                                 <div><strong>Description: </strong>{data.overview}</div>
